@@ -25,10 +25,43 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
+
+    @pyqtSlot()
+    def on_choose_folder_clicked(self):
+        directory1 = QFileDialog.getExistingDirectory(self, "选择文件夹", "./kitdat")
+        print(directory1)  # 打印文件夹路径
+        if len(directory1) == 0:
+            print("\n取消选择")
+            return
+
+        # print("\n你选择的文件为:")
+        for file in directory1:
+            a = Gbk2Big5All.Gbk2Big5All_folder(file)
+            print(file + " 操作结果:" + str(a))
+
+        print("文件筛选器类型: ", directory1)
+        QMessageBox.about(self, "操作成功", '简繁转化完成')
+
+    @pyqtSlot()
+    def on_choose_filename_clicked(self):
+        files, filetype = QFileDialog.getOpenFileNames(self,
+                                                  "多文件选择",
+                                                  "./kitdat/",
+                                                  "All Files (*);;Text Files (*.txt)")
+        if len(files) == 0:
+            print("\n取消选择")
+            return
+
+        # print("\n你选择的文件为:")
+        for file in files:
+            a = Gbk2Big5All.Gbk2Big5All_filename(file)
+            print(file + " 操作结果:" + str(a))
+
+        print("文件筛选器类型: ", filetype)
+        QMessageBox.about(self, "操作成功", '简繁转化完成')
     
     @pyqtSlot()
     def on_choose_btn_clicked(self):
-        print("1")
         files, filetype = QFileDialog.getOpenFileNames(self,
                                                   "多文件选择",
                                                   "./kitdat/",
@@ -53,3 +86,5 @@ if __name__ == "__main__":
     gui = MainWindow()
     gui.show()
     sys.exit(app.exec_())
+    
+

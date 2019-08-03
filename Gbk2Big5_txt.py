@@ -9,8 +9,11 @@ class Gbk2Big5_txt():
     def __init__(self, path, flag=0):
         self.path = path  # 文件路径
         self.flag = flag  # 0-简转繁， 1-繁转简
-        self.file_extension = ".txt"  # 文件拓展名
+        self.file_extension = ".txt"  # 期望文件拓展名
         self.file_extension_True = file_extension.file_extension(self.path)  # 真实文件拓展名
+        self.filename = file_extension.file_name(self.path) # 文件名
+        self.filepath = file_extension.file_path(self.path) # 文件路径
+
 
     def file_open_txt(self):
         f = open(self.path)

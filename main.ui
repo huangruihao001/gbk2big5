@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>342</width>
-    <height>157</height>
+    <width>295</width>
+    <height>223</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;简体转换繁体&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;简体转换繁体&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;txt ini dat mdb&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -26,9 +26,23 @@
      </widget>
     </item>
     <item>
+     <widget class="QPushButton" name="choose_folder">
+      <property name="text">
+       <string>翻译文件夹名</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="choose_filename">
+      <property name="text">
+       <string>翻译文件名称</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QPushButton" name="choose_btn">
       <property name="text">
-       <string>选择文件</string>
+       <string>翻译文件内容</string>
       </property>
      </widget>
     </item>
@@ -39,7 +53,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>342</width>
+     <width>295</width>
      <height>23</height>
     </rect>
    </property>

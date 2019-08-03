@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(342, 157)
+        MainWindow.resize(295, 223)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -20,12 +20,18 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
+        self.choose_folder = QtWidgets.QPushButton(self.centralwidget)
+        self.choose_folder.setObjectName("choose_folder")
+        self.verticalLayout.addWidget(self.choose_folder)
+        self.choose_filename = QtWidgets.QPushButton(self.centralwidget)
+        self.choose_filename.setObjectName("choose_filename")
+        self.verticalLayout.addWidget(self.choose_filename)
         self.choose_btn = QtWidgets.QPushButton(self.centralwidget)
         self.choose_btn.setObjectName("choose_btn")
         self.verticalLayout.addWidget(self.choose_btn)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 342, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 295, 23))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -38,8 +44,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">简体转换繁体</span></p></body></html>"))
-        self.choose_btn.setText(_translate("MainWindow", "选择文件"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">简体转换繁体</span></p><p><span style=\" font-size:12pt;\">txt ini dat mdb</span></p></body></html>"))
+        self.choose_folder.setText(_translate("MainWindow", "翻译文件夹名"))
+        self.choose_filename.setText(_translate("MainWindow", "翻译文件名称"))
+        self.choose_btn.setText(_translate("MainWindow", "翻译文件内容"))
 
 
 if __name__ == "__main__":
