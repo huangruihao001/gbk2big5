@@ -6,6 +6,8 @@ Module implementing MainWindow.
 
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
+from PyQt5.QtGui import QIcon
+import Resources.res
 
 from Ui_main import Ui_MainWindow
 
@@ -26,6 +28,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
+        self.setWindowTitle("简繁转换器")
+        self.setWindowIcon(QIcon(':/ico/logo.ico'))  # 设置窗体标题图标
 
     @pyqtSlot()
     def on_choose_folder_clicked(self):
