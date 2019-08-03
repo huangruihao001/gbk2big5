@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'G:\python\gbk2big5\main.ui'
+# Form implementation generated from reading ui file 'E:\learn_python\gbk2big5\main.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -12,6 +12,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(295, 223)
+        MainWindow.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -20,6 +21,16 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy)
+        self.label_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
         self.choose_folder = QtWidgets.QPushButton(self.centralwidget)
         self.choose_folder.setObjectName("choose_folder")
         self.verticalLayout.addWidget(self.choose_folder)
@@ -44,10 +55,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">简体转换繁体</span></p><p><span style=\" font-size:12pt;\">txt ini dat mdb</span></p></body></html>"))
-        self.choose_folder.setText(_translate("MainWindow", "翻译文件夹名"))
-        self.choose_filename.setText(_translate("MainWindow", "翻译文件名称"))
-        self.choose_btn.setText(_translate("MainWindow", "翻译文件内容"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p><span style=\" font-size:12pt;\">简体转换繁体</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "txt ini dat html xml mdb"))
+        self.choose_folder.setText(_translate("MainWindow", "翻译选择的文件夹下的文件夹或文件名"))
+        self.choose_filename.setText(_translate("MainWindow", "翻译选择的文件名称"))
+        self.choose_btn.setText(_translate("MainWindow", "翻译选择的文件内容"))
 
 
 if __name__ == "__main__":

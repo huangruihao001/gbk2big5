@@ -16,10 +16,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     """
     Class documentation goes here.
     """
+
     def __init__(self, parent=None):
         """
         Constructor
-        
+
         @param parent reference to the parent widget
         @type QWidget
         """
@@ -35,9 +36,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return
 
         # print("\n你选择的文件为:")
-        for file in directory1:
-            a = Gbk2Big5All.Gbk2Big5All_folder(file)
-            print(file + " 操作结果:" + str(a))
+        a = Gbk2Big5All.Gbk2Big5All_folder(directory1)
+        print(directory1 + " 操作结果:" + str(a))
 
         print("文件筛选器类型: ", directory1)
         QMessageBox.about(self, "操作成功", '简繁转化完成')
@@ -45,9 +45,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     @pyqtSlot()
     def on_choose_filename_clicked(self):
         files, filetype = QFileDialog.getOpenFileNames(self,
-                                                  "多文件选择",
-                                                  "./kitdat/",
-                                                  "All Files (*);;Text Files (*.txt)")
+                                                       "多文件选择",
+                                                       "./kitdat/",
+                                                       "All Files (*);;Text Files (*.txt)")
         if len(files) == 0:
             print("\n取消选择")
             return
@@ -59,13 +59,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         print("文件筛选器类型: ", filetype)
         QMessageBox.about(self, "操作成功", '简繁转化完成')
-    
+
     @pyqtSlot()
     def on_choose_btn_clicked(self):
         files, filetype = QFileDialog.getOpenFileNames(self,
-                                                  "多文件选择",
-                                                  "./kitdat/",
-                                                  "All Files (*);;Text Files (*.txt)")
+                                                       "多文件选择",
+                                                       "./kitdat/",
+                                                       "All Files (*);;Text Files (*.txt)")
 
         if len(files) == 0:
             print("\n取消选择")
@@ -79,6 +79,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print("文件筛选器类型: ", filetype)
         QMessageBox.about(self, "操作成功", '简繁转化完成')
 
+
 if __name__ == "__main__":
     import sys
 
@@ -86,5 +87,3 @@ if __name__ == "__main__":
     gui = MainWindow()
     gui.show()
     sys.exit(app.exec_())
-    
-

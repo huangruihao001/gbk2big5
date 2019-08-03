@@ -13,12 +13,34 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;简体转换繁体&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;txt ini dat mdb&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;简体转换繁体&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>txt ini dat html xml mdb</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -28,21 +50,21 @@
     <item>
      <widget class="QPushButton" name="choose_folder">
       <property name="text">
-       <string>翻译文件夹名</string>
+       <string>翻译选择的文件夹下的文件夹或文件名</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="choose_filename">
       <property name="text">
-       <string>翻译文件名称</string>
+       <string>翻译选择的文件名称</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="choose_btn">
       <property name="text">
-       <string>翻译文件内容</string>
+       <string>翻译选择的文件内容</string>
       </property>
      </widget>
     </item>

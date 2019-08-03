@@ -4,6 +4,8 @@ import Gbk2Big5_dat
 import Gbk2Big5_mdb
 import Gbk2Big5_filename
 import Gbk2Big5_folder
+import Gbk2Big5_html
+import Gbk2Big5_xml
 import file_extension
 
 
@@ -18,6 +20,14 @@ def Gbk2Big5All(path):
 
     elif file_extension.file_extension(path) == '.dat':
         a = Gbk2Big5_dat.Gbk2Big5_dat(path)
+        a.convert()
+
+    elif file_extension.file_extension(path) == '.html':
+        a = Gbk2Big5_html.Gbk2Big5_html(path)
+        a.convert()
+
+    elif file_extension.file_extension(path) == '.xml':
+        a = Gbk2Big5_xml.Gbk2Big5_xml(path)
         a.convert()
 
     elif file_extension.file_extension(path) == '.mdb':
