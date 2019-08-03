@@ -1,5 +1,4 @@
 import Gbk2Big5_txt
-import file_extension
 
 
 class Gbk2Big5_dat(Gbk2Big5_txt.Gbk2Big5_txt):

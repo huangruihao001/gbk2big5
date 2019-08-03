@@ -7,8 +7,8 @@ class Gbk2Big5_txt():
     将txt文件简繁转换
     """
     def __init__(self, path, flag=0):
-        self.path = path
-        self.flag = flag
+        self.path = path  # 文件路径
+        self.flag = flag  # 0-简转繁， 1-繁转简
         self.file_extension = ".txt"  # 文件拓展名
         self.file_extension_True = file_extension.file_extension(self.path)  # 真实文件拓展名
 
@@ -32,7 +32,7 @@ class Gbk2Big5_txt():
             f = open(self.path, 'w')
             f.write(file)
             f.close()
-            print('简繁转换成功')
+            # print('简繁转换成功')
         else:
             print('文件类型错误')
 
