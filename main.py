@@ -30,6 +30,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.setWindowTitle("简繁转换器")
         self.setWindowIcon(QIcon(':/ico/logo.ico'))  # 设置窗体标题图标
+        self.label_2.setText("txt ini dat html xml mdb xls")  # 可进行简繁转换的文件后缀
 
     @pyqtSlot()
     def on_choose_folder_clicked(self):
